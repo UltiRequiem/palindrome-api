@@ -1,13 +1,18 @@
 /* eslint-disable no-unused-expressions */
 const boom = require('@hapi/boom')
 
-function validateRequestHandler(schema, check) {
+/**
+ * Handler to validate the schema of a request
+ *
+ * @param {object} schema
+ * @param {string} _res
+ * @param {string} check
+ */
+function validationHandler(schema, check = 'body') {
   return (req, _res, next) => {
-    const { schemaError } = schema.validate(req[check], {
-      errors: { stack: true }
-    })
-    schemaError ? next(boom.badRequest(schemaError)) : next()
+    const { error } = schema.validate(req[check], { errors: { stack: true } })
+    error ? next(boom.badRequest(error)) : next()
   }
 }
 
-module.exports = validateRequestHandler
+module.exports = validationHandler
