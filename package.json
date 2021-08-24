@@ -1,6 +1,6 @@
 {
   "name": "palindrome-api",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "An API to know if a word is Palindrome. (A word that reads the same backward as forward)",
   "main": "src/index.js",
   "repository": "git@github.com:UltiRequiem/palindrome-api.git",
