@@ -1,5 +1,8 @@
 const express = require('express')
+
 const cors = require('cors')
+const helmet = require('helmet');
+
 
 const config = require('./config')
 const { rootRouter } = require('./routes')
@@ -15,6 +18,7 @@ const api = express()
 
 // Plugins
 api.use(cors())
+api.use(helmet())
 
 // Principal (and unique) root
 api.use('/', rootRouter)
