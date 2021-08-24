@@ -7,6 +7,7 @@
   "author": "Eliaz Bobadilla <eliaz.bobadilladev@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "start": "NODE_ENV=production node src/index",
     "format": "npx prettier --write '**/**/*.js'",
     "lint": "npx eslint . --ext .js"
   },
