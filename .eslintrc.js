@@ -1,6 +1,5 @@
 module.exports = {
   env: {
-    browser: true,
     node: true,
     es2021: true,
     es6: true
@@ -11,9 +10,6 @@ module.exports = {
     'prettier',
     'eslint:recommended',
   ],
-  settings: {
-    'import/resolver': 'webpack'
-  },
   plugins: ['import'],
   parserOptions: {
     ecmaVersion: 2021,
