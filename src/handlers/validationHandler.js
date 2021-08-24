@@ -8,7 +8,7 @@ const boom = require('@hapi/boom')
  * @param {string} _res
  * @param {string} check
  */
-function validationHandler(schema, check = 'body') {
+function validationHandler(schema, check) {
   return (req, _res, next) => {
     const { error } = schema.validate(req[check], { errors: { stack: true } })
     error ? next(boom.badRequest(error)) : next()

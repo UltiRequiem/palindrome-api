@@ -8,7 +8,7 @@ function reverseWord(word) {
   return word.split('').reverse().join('')
 }
 
-function isPalindrome(word) {
+function PalindromeService(word) {
   return new Promise((resolve) => {
     const reversedWord = reverseWord(word).toLowerCase().replaceAll(' ', '')
 
@@ -21,4 +21,4 @@ function isPalindrome(word) {
   })
 }
 
-module.exports = isPalindrome
+module.exports = PalindromeService

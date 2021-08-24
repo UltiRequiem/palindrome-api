@@ -1,9 +1,7 @@
 const boom = require('@hapi/boom')
-const log4js = require('log4js')
 
 const config = require('../config')
 
-const logger = log4js.getLogger()
 
 /**
  * Remove error stack on production mode
@@ -23,7 +21,7 @@ const errorStack = (err, stack) => (config.dev ? { ...err, stack } : err)
  * @param {function} next
  */
 function logErrors(err, _req, _res, next) {
-  logger.error(err)
+  console.warn(err)
   next(err)
 }
 
