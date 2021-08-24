@@ -10,11 +10,13 @@ function reverseWord(word) {
 
 function isPalindrome(word) {
   return new Promise((resolve) => {
-    const reversedWord = reverseWord(word)
+    const reversedWord = reverseWord(word).toLowerCase().replaceAll(' ', '')
 
     resolve({
       reversedWord,
-      isPalindrome: reversedWord === word
+      ...(reversedWord === word.toLowerCase().replaceAll(' ', '') && {
+        isPalindrome: true
+      })
     })
   })
 }

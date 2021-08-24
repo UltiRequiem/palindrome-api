@@ -1,8 +1,11 @@
-const yup = require('yup')
+const joi = require('joi')
 
-const responseSchema = yup.object().shape({
-  isPalindrome: yup.bool(),
-  reversedWord: yup.string().required()
+const responseSchema = joi.object({
+  text: joi.string().min(1).required().messages({
+    'string.empty': 'no text',
+    'any.required': 'text field is required'
+  })
 })
 
-module.exports = responseSchema
+
+module.exports = { schema: responseSchema }
