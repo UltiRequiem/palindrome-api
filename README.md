@@ -1,1 +1,1 @@
-# palindrome-api
+# Palindrome API
