@@ -12,6 +12,22 @@ Try it with curl:
 curl https://z5b6d8bad-z00481bbb-gtw.qovery.io/lol
 ```
 
+## Response
+
+Tipical response:
+
+```json
+// https://z5b6d8bad-z00481bbb-gtw.qovery.io/lola
+{ "reversedWord": "alol" }
+```
+
+But if the word is a Palindrome:
+
+```
+// https://z5b6d8bad-z00481bbb-gtw.qovery.io/lol
+{"reversedWord":"lol","isPalindrome":true}
+```
+
 ### License
 
 Palirevert is licensed under the [MIT License]('./LICENSE.md')
