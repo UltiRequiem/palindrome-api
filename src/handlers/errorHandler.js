@@ -2,7 +2,6 @@ const boom = require('@hapi/boom')
 
 const config = require('../config')
 
-
 /**
  * Remove error stack on production mode
  *
