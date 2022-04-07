@@ -1,10 +1,10 @@
-import { Application, Router } from "./deps.ts";
+import { Application, Router, oakCors } from "./deps.ts";
 
-import { PalindromeMiddleware, DocsMiddleware, CORSMiddleware } from "./middleware.ts";
+import { PalindromeMiddleware, DocsMiddleware } from "./middleware.ts";
 
 const app = new Application();
 
-app.use(CORSMiddleware);
+app.use(oakCors({ origin: "*" }));
 
 const router = new Router();
 
