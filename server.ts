@@ -14,8 +14,8 @@ router.get("/", DocsMiddleware);
 app.use(router.routes());
 app.use(router.allowedMethods());
 
-const PORT = 8000;
+const port = 8000;
 
-app.listen({ port: 8000 });
+app.listen({ port });
 
-console.log(`Check https://localhost:${PORT}`);
+console.log(`Check https://localhost:${port}`);
