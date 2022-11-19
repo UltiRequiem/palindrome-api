@@ -1,9 +1,11 @@
+import { reverse } from "./core.ts";
+
 import type { RouterMiddleware } from "./deps.ts";
 
 export const PalindromeMiddleware: RouterMiddleware<"/:word"> = (ctx) => {
   const { word } = ctx.params;
 
-  const reversed = [...word].reverse().join("");
+  const reversed = reverse(word);
   const result = reversed === word;
 
   ctx.response.body = { reversed, result };
