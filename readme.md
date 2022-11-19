@@ -2,6 +2,10 @@
 
 Palindrome API
 
+Live coding 👇
+
+[![Video Thumbnail](./youtube.png)](https://youtu.be/75Op1TaduI0)
+
 ## Endpoints
 
 ### `GET /:word`
