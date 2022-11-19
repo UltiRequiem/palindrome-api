@@ -2,7 +2,7 @@
 
 Palindrome API
 
-Live coding 👇
+[Live coding](https://youtu.be/75Op1TaduI0) 👇
 
 [![Video Thumbnail](./youtube.png)](https://youtu.be/75Op1TaduI0)
 
